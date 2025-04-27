@@ -34,16 +34,16 @@ Node* insert(Node* root, int value) {
 }
 
 // Функция прямого обхода (preorder) с выводом значений
-void preorderTraversal(Node* root) {
+void preorder(Node* root) {
     if (root != nullptr) {
         // 1. Посетить корень
         cout << root->data << " ";
         
         // 2. Обойти левое поддерево
-        preorderTraversal(root->left);
+        preorder(root->left);
         
         // 3. Обойти правое поддерево
-        preorderTraversal(root->right);
+        preorder(root->right);
     }
 }
 
@@ -60,8 +60,8 @@ int main() {
     insert(root, 8);
     
     // Выводим дерево методом прямого обхода
-    cout << "Preorder traversal: ";
-    preorderTraversal(root);
+    cout << "Preorder: ";
+    preorder(root);
     cout << endl;
     
     return 0;
